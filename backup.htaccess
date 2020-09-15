@@ -1,0 +1,50 @@
+
+# BEGIN All In One WP Security
+#AIOWPS_BASIC_HTACCESS_RULES_START
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+ServerSignature Off
+LimitRequestBody 10240000
+<Files wp-config.php>
+order allow,deny
+deny from all
+</Files>
+#AIOWPS_BASIC_HTACCESS_RULES_END
+#AIOWPS_FORBID_PROXY_COMMENTS_START
+RewriteCond %{REQUEST_METHOD} ^POST
+RewriteCond %{HTTP:VIA} !^$ [OR]
+RewriteCond %{HTTP:FORWARDED} !^$ [OR]
+RewriteCond %{HTTP:USERAGENT_VIA} !^$ [OR]
+RewriteCond %{HTTP:X_FORWARDED_FOR} !^$ [OR]
+RewriteCond %{HTTP:X_FORWARDED_HOST} !^$ [OR]
+RewriteCond %{HTTP:PROXY_CONNECTION} !^$ [OR]
+RewriteCond %{HTTP:XPROXY_CONNECTION} !^$ [OR]
+RewriteCond %{HTTP:HTTP_PC_REMOTE_ADDR} !^$ [OR]
+RewriteCond %{HTTP:HTTP_CLIENT_IP} !^$
+RewriteRule wp-comments-post\.php - [F]
+#AIOWPS_FORBID_PROXY_COMMENTS_END
+#AIOWPS_DENY_BAD_QUERY_STRINGS_START
+RewriteCond %{QUERY_STRING} tag=     [NC,OR]
+RewriteCond %{QUERY_STRING} ftp:     [NC,OR]
+RewriteCond %{QUERY_STRING} http:    [NC,OR]
+RewriteCond %{QUERY_STRING} https:   [NC,OR]
+RewriteCond %{QUERY_STRING} mosConfig [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(globals|encode|localhost|loopback).* [NC,OR]
+RewriteCond %{QUERY_STRING} (\;|'|\"|%22).*(request|insert|union|declare|drop) [NC]
+RewriteRule ^(.*)$ - [F,L]
+#AIOWPS_DENY_BAD_QUERY_STRINGS_END
+# END All In One WP Security
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

@@ -1,0 +1,522 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 07:41:12
+* VERSION: 1.3.36
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.2.31                                |7.2.22
+OS__________________: Linux                                 |Darwin
+CREATED_____________: 2020-09-15 19:35:41
+WP VERSION__________: 5.3.4
+DUP VERSION_________: 1.3.36
+DB__________________: 10.1.46
+DB TABLES___________: 24
+DB ROWS_____________: 18,056
+DB FILE SIZE________: 7.1MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.2.22 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache
+DOC ROOT____________: "/Users/bramroos/Sites/xsinvestments"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://localhost/xsinvestments/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "shellexec_unzip"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "/Users/bramroos/Sites/xsinvestments/20160711_xsinvestments_[HASH]_20200915193541_archive.zip"
+SIZE________________: 673.49MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+
+
+START ZIP FILE EXTRACTION SHELLEXEC >>> 
+<<< Shell-Exec Unzip Complete.
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 07:41:24 - RUNTIME: 12.1176 sec.
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 07:41:37
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.26 -- Build Server: 10.1.46
+FILE SIZE:	dup-database__[HASH].sql (4.13MB)
+TIMEOUT:	5000
+MAXPACK:	16777216
+SQLMODE:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Users/bramroos/Sites/xsinvestments/dup-installer/dup-installer-data__[HASH].sql]
+COLLATE FB:	Off
+
+NOTICE: This servers version [5.7.26] is less than the build version [10.1.46].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+[PHP ERR][WARN] MSG:count(): Parameter must be an array or an object that implements Countable [CODE:2|FILE:/Users/bramroos/Sites/xsinvestments/dup-installer/ctrls/ctrl.s2.dbinstall.php|LINE:392]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	18687
+
+xsinaiowps_events: (0)
+xsinaiowps_failed_logins: (8124)
+xsinaiowps_global_meta: (0)
+xsinaiowps_login_activity: (363)
+xsinaiowps_login_lockdown: (865)
+xsinaiowps_permanent_block: (0)
+xsincommentmeta: (2)
+xsincomments: (0)
+xsinduplicator_packages: (0)
+xsinlinks: (0)
+xsinoptions: (286)
+xsinpostmeta: (5388)
+xsinposts: (696)
+xsinrevslider_static_slides: (0)
+xsinterm_relationships: (667)
+xsinterm_taxonomy: (246)
+xsintermmeta: (0)
+xsinterms: (246)
+xsintm_taskmeta: (0)
+xsintm_tasks: (0)
+xsinusermeta: (125)
+xsinusers: (4)
+xsinyoast_seo_links: (1347)
+xsinyoast_seo_meta: (254)
+Removed '47' cache/transient rows
+
+INSERT DATA RUNTIME: 2.0717 sec.
+STEP-2 COMPLETE @ 07:41:39 - RUNTIME: 2.0850 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 07:41:46
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "XS Investments"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/www"
+path_new______________: "/Users/bramroos/Sites/xsinvestments"
+siteurl_______________: "http://localhost:8888/xsinvestments"
+url_old_______________: "http://www.xsinvestments.com"
+url_new_______________: "http://localhost:8888/xsinvestments"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_mail_______________: ""
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "xsinaiowps_events"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinaiowps_failed_logins"________________________[ROWS:  8124][PG:   3][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinaiowps_global_meta"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinaiowps_login_activity"_______________________[ROWS:   363][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinaiowps_login_lockdown"_______________________[ROWS:   865][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinaiowps_permanent_block"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsincommentmeta"_________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsincomments"____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinduplicator_packages"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinlinks"_______________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinoptions"_____________________________________[ROWS:   286][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinpostmeta"____________________________________[ROWS:  5388][PG:   2][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinposts"_______________________________________[ROWS:   696][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinrevslider_static_slides"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinterm_relationships"__________________________[ROWS:   667][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinterm_taxonomy"_______________________________[ROWS:   246][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsintermmeta"____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinterms"_______________________________________[ROWS:   246][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsintm_taskmeta"_________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsintm_tasks"____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "xsinusermeta"____________________________________[ROWS:   125][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinusers"_______________________________________[ROWS:     4][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinyoast_seo_links"_____________________________[ROWS:  1347][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+
+EVALUATE TABLE: "xsinyoast_seo_meta"______________________________[ROWS:   254][PG:   1][SCAN:text columns]
+	SEARCH  1:"/www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  2:"\/www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  3:"%2Fwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  4:"\www" ============================================> "/Users/bramroos/Sites/xsinvestments"
+	SEARCH  5:"\\www" ===========================================> "\/Users\/bramroos\/Sites\/xsinvestments"
+	SEARCH  6:"%5Cwww" ==========================================> "%2FUsers%2Fbramroos%2FSites%2Fxsinvestments"
+	SEARCH  7:"//www.xsinvestments.com" =========================> "//localhost:8888/xsinvestments"
+	SEARCH  8:"\/\/www.xsinvestments.com" =======================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH  9:"%2F%2Fwww.xsinvestments.com" =====================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 10:"//xsinvestments.com" =============================> "//localhost:8888/xsinvestments"
+	SEARCH 11:"\/\/xsinvestments.com" ===========================> "\/\/localhost:8888\/xsinvestments"
+	SEARCH 12:"%2F%2Fxsinvestments.com" =========================> "%2F%2Flocalhost%3A8888%2Fxsinvestments"
+	SEARCH 13:"https://localhost:8888/xsinvestments" ============> "http://localhost:8888/xsinvestments"
+	SEARCH 14:"https:\/\/localhost:8888\/xsinvestments" =========> "http:\/\/localhost:8888\/xsinvestments"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fxsinvestments" ==> "http%3A%2F%2Flocalhost%3A8888%2Fxsinvestments"
+--------------------------------------
+SCANNED:	Tables:24 	|	 Rows:18613 	|	 Cells:101654 
+UPDATED:	Tables:4 	|	 Rows:832 	|	 Cells:1059 
+ERRORS:		0 
+RUNTIME:	0.872600 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME ""xsinvestments""
+	UPDATE DB_USER ""root""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache '.htaccess__[HASH]' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Deactivated plugins list here: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 07:41:47 - RUNTIME: 0.9304 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================

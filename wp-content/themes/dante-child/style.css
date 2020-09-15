@@ -1,0 +1,1033 @@
+/* LICENSE & DETAILS
+
+   ==================================================
+
+
+
+	Theme Name: Dante Child Theme
+
+	Description: Child Theme for the XS Investments Wordpress Theme
+
+	License: GNU General Public License version 3.0
+
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+	Template: dante
+
+	Version: 1.0
+
+	Author: Spore Creation
+
+	Author URI: www.spore-creation.nl
+
+
+
+	All files, unless otherwise stated, are released under the GNU General Public License
+
+	version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
+
+
+
+   ==================================================
+
+*/
+
+
+
+/* --------------------------------------------
+
+	DANTE CSS IMPORT
+
+-------------------------------------------- */
+
+
+
+@import url("../dante/style.css");
+
+
+
+
+
+/* --------------------------------------------
+
+	CHILD THEME CSS
+
+-------------------------------------------- */
+
+
+
+.disabled.menu-item:hover a {
+	background-color: #ffffff !important;
+}
+
+nav .menu ul.sub-menu li.menu-item.disabled:hover > a {
+	color: #666666 !important;
+}
+
+
+
+address {
+font-style: normal;
+font-size: 12px !important; font-weight: normal !important;
+}
+
+.textwidget {
+    text-align: left !important;
+}
+
+.textwidget p {
+	font-size:12px!important;
+	color:#999999!important;
+	font-weight:600!important;
+}
+
+.widget_media_image img {
+	width:120px;
+}
+
+@media screen and (min-width: 768px) {
+  .widget_media_image img {
+	float:right;
+	}
+}
+
+
+
+
+
+
+
+
+/* --- FIX SEARCH COLOR --- */
+
+.ajax-search-wrap input[type="text"], .search-result-pt h6, .no-search-results h6, .search-result h5 a {color: #666666 !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- COMPANY STATEMENTS - HIDE DETAILS PER CATEGORY --- */
+
+.category-truebridge-statement .blog-item-details {display: none;}
+
+.category-truebridge-statement h4 {margin-bottom: 18px !important;}
+
+.category-truebridge-statement .vcard  {display: none;}
+
+.category-truebridge-statement .post-info {margin:-10px 0 35px 0;}
+
+
+
+.category-forbion-statement .blog-item-details {display: none;}
+
+.category-forbion-statement h4 {margin-bottom: 18px !important;}
+
+.category-forbion-statement .vcard  {display: none;}
+
+.category-forbion-statement .post-info {margin:-10px 0 35px 0;}
+
+
+
+.category-twelve-capital-statement .blog-item-details {display: none;}
+
+.category-twelve-capital-statement h4 {margin-bottom: 18px !important;}
+
+.category-twelve-capital-statement .vcard  {display: none;}
+
+.category-twelve-capital-statement .post-info {margin:-10px 0 35px 0;}
+
+
+
+.category-incofin-statement .blog-item-details {display: none;}
+
+.category-incofin-statement h4 {margin-bottom: 18px !important;}
+
+.category-incofin-statement .vcard  {display: none;}
+
+.category-incofin-statement .post-info {margin:-10px 0 35px 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- FONT-FACE - LOAD INTERSTATE --- */
+
+@font-face {
+
+    font-family: 'interstate-regularregular';
+
+    src: url('interstate-regular-webfont.eot');
+
+    src: url('interstate-regular-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('interstate-regular-webfont.woff') format('woff'),
+
+         url('interstate-regular-webfont.ttf') format('truetype'),
+
+         url('interstate-regular-webfont.svg#interstate-regularregular') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+
+    font-family: 'interstate-lightregular';
+
+    src: url('interstate-light-webfont.eot');
+
+    src: url('interstate-light-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('interstate-light-webfont.woff') format('woff'),
+
+         url('interstate-light-webfont.ttf') format('truetype'),
+
+         url('interstate-light-webfont.svg#interstate-lightregular') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- TYPOGRAPHY - FONT-FACE --- */
+
+h1 {text-align: center; text-transform: uppercase; letter-spacing: 2px;}
+
+h3 {margin-bottom: 6px;}
+
+
+
+h1 {font-family: "interstate-lightregular", "Noto Sans", sans-serif !important;}
+
+h3 {font-family: "interstate-regularregular", "Noto Sans", sans-serif !important;}
+
+h2 {font-family: "interstate-lightregular", "Noto Sans", sans-serif !important;}
+
+h4 {font-family: "interstate-lightregular", "Noto Sans", sans-serif !important;}
+
+p {font-family: "interstate-lightregular", "Noto Sans", sans-serif !important;}
+
+.menu li {font-family: "interstate-lightregular", "Noto Sans", sans-serif !important;}
+
+.read-more-button {font-family: "interstate-regularregular", "Noto Sans", sans-serif !important;}
+
+body {font-family: "interstate-regularregular", "Noto Sans", sans-serif !important;}
+
+#copyright p {
+	font-family: "interstate-regularregular", "Noto Sans", sans-serif !important;
+	text-align:left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- EXTRA CLASSES - OVERVIEW --- */
+
+/*.content                - set content width general */
+
+/*.content-intro          - set introduction text on pages */
+
+/*.content-intro-home     - set introduction home page */
+
+/*.content-team-intro     - set introduction text on portfolio pages */ 
+
+/*.content-intro-partners - set introduction partners page */
+
+/*.content-background     - set backgrounds */
+
+/*.our-partners-logos     - set logos partner overview page */
+
+/*.more-information       - set more info block partners */
+
+
+
+/* --- EXTRA CLASSES --- */
+
+.content {max-width: 650px; margin-left:auto; margin-right:auto;}
+
+.content-intro p {text-align: center; font-size: 18px; line-height: 28px; max-width: 750px; margin-left:auto; margin-right:auto; }
+
+.content-intro-home p {text-align: center; font-size: 16px; line-height: 28px;}
+
+.content-intro-home h2 {text-align: center; text-transform: uppercase; letter-spacing: 2px;}
+
+.content-team-intro p {text-align: center; font-size: 18px; line-height: 28px; max-width: 750px; margin-left:auto; margin-right:auto; padding-bottom: 20px;}
+
+
+
+.content-intro-partners h1 {text-transform: none; font-size: 26px; color: #9b9c9e;letter-spacing: 0; margin-bottom: 30px;}
+
+
+
+.content-tag {max-width: 800px; margin-left:auto; margin-right:auto;}
+
+
+
+.content-background {background-color: #ececed; padding-top: 50px !important; padding-bottom:50px!important;}
+
+.content-background {-webkit-box-shadow:inset 0 10px 20px -10px #cccccc!important;
+
+box-shadow:inset 0 10px 20px -10px #cccccc!important;}
+
+
+
+.our-partners-logos {padding-top:14px;}
+
+.our-partners-logos p {text-align: center; font-size: 18px; color: #9c9b9e; margin-top: -8px;}
+
+.our-partners-logos-border {padding-top: 20px !important;border-bottom: #ececed;border-bottom-style: solid;border-bottom-width: 2px;}
+
+.our-partners-logos-border-last{padding-top: 20px !important;}
+
+
+
+.more-information {max-width: 620px; margin-left:auto; margin-right:auto; background-color: #ffffff; padding: 30px 30px 20px 30px; margin-bottom: 60px;text-align:center;}
+
+.more-information h3 {letter-spacing: 2px;text-transform: uppercase;text-align: center;font-size: 12px;color: #646466;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- THUMBNAILS - RESTYLING --- */
+
+figure.animated-overlay figcaption {background-color: transparent !important;} /* kleur achtergrond */
+
+figure.animated-overlay:hover figcaption {opacity: 1; filter:alpha(opacity=100); -webkit-transform: translate(0px, 0px);-moz-transform: translate(0px, 0px);-ms-transform: translate(0px, 0px);transform: translate(0px, 0px);background-image:url('http://www.xsinvestments.com/wp-content/uploads/header-bg.png') !important;}
+
+
+
+/* --- THUMBNAILS - REMOVE ARROW ON HOVER --- */
+
+figure.animated-overlay figcaption .thumb-info i {background: #f47921 !important; color: #cccccc !important; display: none;}
+
+
+
+/* --- THUMBNAILS - POSITION H4 TITLE --- */
+
+figcaption .thumb-info h4 {margin-top: -10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- B&W IMAGE - IMAGE HOVER ---*/
+
+.bw img {-webkit-filter: grayscale(100%);-webkit-transition: all 1s ease;-moz-transition: all 1s ease;-o-transition: all 1s ease;-ms-transition: all 1s ease;transition: all 1s ease;}
+
+.bw a img:hover {-webkit-filter: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- STYLING MENU --- */
+
+nav.std-menu .menu li > a {text-transform: uppercase; letter-spacing:0.5px;}
+
+
+
+/* --- SEARCH RESULTS DROPDOWN CIRCLE > SQUARE --- */
+
+.search-item-img img, .search-item-img .img-holder {-moz-border-radius: 0;-webkit-border-radius: 0;border-radius: 0;}
+
+
+
+
+
+
+
+
+
+
+
+/* --- MENU DROPDOWN POSITION  --- */
+
+nav.std-menu .menu ul.sub-menu {margin-top:12px;}
+
+
+
+.ajax-search-wrap {background-color: #ffffff !important;background: #ffffff !important; top: 56px !important;}
+
+.ajax-search-wrap:after {border-bottom-color: #ffffff !important;}
+
+
+
+
+
+/*--- ADD "MENU" MOBILE MENU ---*/
+
+#logo a.mobile-menu-show i:after {
+
+content: "MENU";
+
+float: left;
+
+margin-right: 12px;
+
+font-size: 14px;
+
+line-height: 20px;
+
+font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- REMOVE TOP SPACING THROUGHOUT WEBSITE 
+
+.inner-page-wrap {margin-top: 20px;margin-bottom: 0px;}--- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- PARALLAX TOP --- */
+
+.spb_parallax_asset.parallax-stellar {margin-top: 0 !important;}
+
+
+
+.parallax-header-image-home {height: 850px !important; margin-bottom: 30px !important;}
+
+.parallax-header-image {height: 700px !important; margin-bottom: 30px !important; }
+
+.parallax-header-text {margin-top: 300px;  text-align: center;}
+
+.parallax-header-text-home {margin-top: 420px;  text-align: center;}
+
+.parallax-header-text-home h1 {color: #ffffff !important; font-size: 32px !important;}
+
+
+
+/* --- PARALLAX - REMOVE INNER SHADOW --- */
+
+.spb_parallax_asset {box-shadow: none!important;}
+
+
+
+
+
+
+
+/* --- OPTIE 1 --- */
+
+/* --- PARALLAX TOP - PORTFOLIO --- */
+
+.spb_parallax_asset.parallax-stellar.parallax-header-image-portfolio {height: 600px !important; margin-bottom: 30px !important;  margin-top: -150px !important; }
+
+
+
+/* --- FIX PARALLAX - BACKGROUND IMAGE COVER > CONTAIN --- */
+
+.spb_parallax_asset.parallax-stellar.parallax-header-image-portfolio {-webkit-background-size: contain !important; background-size:1800px !important; background-position: 20% 20px !important; background-color: #ebeff2 !important;}
+
+
+
+
+
+
+
+
+
+
+
+/* --- OPTIE 1 --- */
+
+/* --- PARALLAX TOP - PORTFOLIO --- */
+
+.spb_parallax_asset.parallax-stellar.parallax-header-image-portfolio-right {height: 600px !important; margin-bottom: 30px !important;  margin-top: -150px !important; }
+
+
+
+/* --- FIX PARALLAX - BACKGROUND IMAGE COVER > CONTAIN --- */
+
+.spb_parallax_asset.parallax-stellar.parallax-header-image-portfolio-right {-webkit-background-size: contain !important; background-size:1800px !important; background-position: 80% 20px!important;background-color:#ebeff2 !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- CONTACT FORM --- */
+
+#left {width: 49%; min-width: 150px;float: left;} 
+
+#right {width: 49%; min-width: 150px;float: left;}
+
+.clearfix:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+
+.clearfix {display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- BLOG - SET 2 COLUMN BLOG --- */
+
+.blog-item.col-sm-4 {width: 50%;} 
+
+
+
+/* --- BLOG - HEADER RESTYLING --- */
+
+h3.spb-heading {letter-spacing: 2px;text-transform: uppercase;text-align: center;font-size: 12px;color: #646466;}
+
+
+
+/* --- BLOG - HEADER BEFORE & AFTER RESTYLING --- */
+
+h3.spb-heading span:before, h3.spb-heading span:after { border-color: #b0b1b3 !important;}
+
+
+
+/* --- BLOG - RESTYLING --- */
+
+.masonry-items .blog-item .details-wrap {background-color: #ffffff;-moz-border-radius-bottomleft: 0px;-moz-border-radius-bottomright: 0px;-webkit-border-bottom-left-radius: 0px;-webkit-border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;-moz-box-shadow: none!important;-webkit-box-shadow: none!important;box-shadow: none!important;}
+
+
+
+/* --- BLOG - HIDE COMMENTS AND HEARTS --- */
+
+.blog-item .comments-likes {display: none;}
+
+
+
+
+
+
+
+
+
+
+
+/* --- ARCHIVE PAGE - STYLING ITEM BACKGROUND --- */
+
+.archive-page .masonry-items .blog-item .details-wrap {background-color: #ececed;}
+
+
+
+
+
+.heading-text {margin-top: 100px; display: none;}
+
+
+
+.inner-page-wrap > .archive-page {margin-top: 50px !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- BLOG TIMELINE OVERVIEW - RESTYLING --- */
+
+.masonry-items .portfolio-item-details {background: none;}
+
+.standard-post-content {background: #fff !important;margin-bottom: 4px;-moz-border-radius: 0 !important;-webkit-border-radius: 0 !important;border-radius: 0 !important;-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;}
+
+
+
+/* --- BLOG TIMELINE - REMOVE BEFORE --- */
+
+.standard-post-content.no-thumb:before {display: none;}
+
+
+
+/* --- BLOG TIMELINE OVERVIEW - SEARCH WIDGET --- */
+
+.search-widget input {width: 100%;}
+
+
+
+/* --- BLOG TIMELINE OVERVIEW - REMOVE DATE --- */
+
+.standard-post-date {display: none;}
+
+
+
+/* --- BLOG TIMELINE OVERVIEW - CENTER LINE --- */
+
+.has-no-sidebar .timeline {left: 50%;}
+
+
+
+/* --- BLOG TIMELINE OVERVIEW - H1 --- */
+
+.standard-post-content h1 {text-transform: none; letter-spacing: 0; text-align: left;}
+
+
+
+/* --- BLOG TIMELINE OVERVIEW - REMOVE MARGIN TOP --- */
+
+.inner-page-wrap {margin-top: 120px;}
+
+
+
+
+
+
+
+
+
+
+
+/* --- BLOG DETAIL PAGE - HIDE POST NAVIGATION --- */
+
+ul.post-pagination-wrap {display: none;}
+
+
+
+
+
+/* BLOG DETAIL PAGE - SIDEBAR STYLING --- */
+
+.sidebar .widget-heading h4 {
+
+text-transform: uppercase;font-size: 13px;letter-spacing: 2px;text-align: center;color: #646466!important; ;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- PORTFOLIO OVERVIEW - RESTYLING --- */
+
+.portfolio-item.masonry-item .portfolio-item-details {padding: 15px 0 20px;-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;}
+
+
+
+/* --- PORTFOLIO OVERVIEW - REMOVE BACKGROUND COLOR --- */
+
+.masonry-items .portfolio-item-details {background: none!important;}
+
+
+
+/* --- PORTFOLIO OVERVIEW - HIDE COMMENTS --- */
+
+.comments-likes {display: none;}
+
+
+
+/* --- PORTFOLIO OVERVIEW - H3 STYLING --- */
+
+.portfolio-item h3.portfolio-item-title {text-transform: uppercase; letter-spacing: 2px;margin-bottom: 5px;text-align: center;}
+
+
+
+/* --- PORTFOLIO OVERVIEW - SUBTITLE STYLING --- */
+
+.portfolio-item h5.portfolio-subtitle {margin-bottom: 5px;text-align: center;}
+
+
+
+/* --- PORTFOLIO OVERVIEW - REMOVE DIAGONAL BG --- */
+
+figure.animated-overlay figcaption {background-image: none!important;}
+
+
+
+/* --- PORTFOLIO OVERVIEW - REMOVE ROUND CORNERS THUMBNAIL --- */
+
+.masonry-gallery-item figure, .masonry-gallery-item figure img, .masonry-gallery-item figure figcaption, .masonry-gallery-item figure iframe {webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- REMOVE ARTICLE BODY WRAP --- */
+
+.article-body-wrap {margin-bottom: 0!important;}
+
+
+
+/* --- RELATED ANIMATED OVERLAY --- */
+
+article.portfolio .related-projects h4 {font-size: 15px;text-transform: uppercase;}
+
+
+
+/* --- ADD MARGIN-BOTTOM --- */
+
+.related-projects {margin-bottom: 60px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- FOOTER - RESTYLING--- */
+
+#copyright p {font-size: 12px !important; text-align: center; width: 100%;}
+
+.textwidget {text-align: center; font-size: 22px; text-align: center; font-family: "interstate-lightregular", "Noto Sans", sans-serif !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- TAGS --- */
+
+.pta-posttags {text-align: center;}
+
+
+
+/* --- TAGS RESTYLING --- */
+
+.pta-posttags a {color: #666666 !important;}
+
+.pta-posttags a:hover {color: #f47921!important;}
+
+
+
+
+
+
+
+
+
+
+
+.mobile-menu-show i {
+
+color: #ffffff;}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .parallax-header-image-home {height: 400px !important; }
+
+    .parallax-header-text-home {margin-top: 160px;}
+
+
+
+.parallax-header-image {height: 400px !important; }
+
+.parallax-header-text {margin-top: 350px;}
+
+
+
+		
+
+}
+
+
+
+.page-heading {background: transparent !important;
+
+}
+
+
+
+/* --- TRANSPARENT HEADER FIX - SWIFT IDEAS --- */
+
+#header-section:before {
+
+background: transparent;
+
+}
+
+#header {
+
+background: transparent!important;
+
+background-image:url('http://www.xsinvestments.com/wp-content/uploads/header-bg.png') !important;
+
+}
+
+.header-wrap {
+
+width: 100%;
+
+position: absolute;
+
+left: 0;
+
+z-index: 7;
+
+}
+
+.header-overlay .header-wrap {
+
+left: 50%;
+
+}
+
+#header-section,  #header-section:before,  #header .is-sticky .sticky-header,  .is-sticky #header.sticky-header {
+
+-moz-box-shadow: none!important;
+
+-webkit-box-shadow: none!important;
+
+box-shadow: none!important;
+
+background: transparent!important;
+
+}
+
+ #header .is-sticky .sticky-header,  .is-sticky #header.sticky-header {
+
+background: transparent!important;
+
+background-image:url('http://www.xsinvestments.com/wp-content/uploads/header-bg.png') !important;
+
+transition: background 0.5s ease-in-out;
+
+-moz-transition: background 0.5s ease-in-out;
+
+-webkit-transition: background 0.5s ease-in-out;
+
+-o-transition: background 0.5s ease-in-out;
+
+-webkit-animation-fill-mode: both;
+
+-moz-animation-fill-mode: both;
+
+-o-animation-fill-mode: both;
+
+animation-fill-mode: both;
+
+
+
+}
+
+#header .is-sticky .sticky-header.sticky-header-resized, .is-sticky #header.sticky-header.sticky-header-resized {
+
+background: transparent!important;
+
+background-image:url('http://www.xsinvestments.com/wp-content/uploads/header-bg.png') !important;
+
+-moz-box-shadow: 0 3px 5px rgba(0,0,0,.05)!important;
+
+-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.05)!important;
+
+box-shadow: 0 3px 5px rgba(0,0,0,.05)!important;
+
+}
+
+
+
+/* --- END HEADER FIX --- */
