@@ -53,7 +53,8 @@
 				if (!empty( $item->menuicon )) {
 					$item_output .= '<i class="'.$item->menuicon.'"></i>';
 				}
-				$item_output .= $args->link_before .$prepend.apply_filters( 'the_title', $item->title, $item->ID ).$append;
+				$menu_item_text = apply_filters( 'the_title', $item->title, $item->ID );
+				$item_output .= $args->link_before .$prepend. do_shortcode($menu_item_text) .$append;
 				$item_output .= $args->link_after;
 				$item_output .= '</span>';
 				if (!empty( $item->htmlcontent )) {
@@ -66,7 +67,8 @@
 				if (!empty( $item->menuicon )) {
 					$item_output .= '<i class="'.$item->menuicon.'"></i>';
 				}
-				$item_output .= $args->link_before .$prepend.apply_filters( 'the_title', $item->title, $item->ID ).$append;
+				$menu_item_text = apply_filters( 'the_title', $item->title, $item->ID );
+				$item_output .= $args->link_before .$prepend. do_shortcode($menu_item_text) .$append;
 				$item_output .= $args->link_after;
 				//$item_output .= $description.$args->link_after;
 				//$item_output .= ' '.$item->subtitle.'</a>';

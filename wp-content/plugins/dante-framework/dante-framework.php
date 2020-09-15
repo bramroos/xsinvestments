@@ -3,7 +3,7 @@
  * Plugin Name:       Dante Framework
  * Plugin URI:        http://swiftideas.com/dante-framework/
  * Description:       Framework plugin for the Neightborhood WordPress theme
- * Version:           1.0.6
+ * Version:           1.0.9
  * Author:            Swift Ideas
  * Author URI:        http://swiftideas.com/
  * License:           GPL-2.0+
@@ -12,7 +12,7 @@
  * Domain Path:       /languages
  */
 
-define( 'DANTE_FRAMEWORK_VERSION', '1.0.6' );
+define( 'DANTE_FRAMEWORK_VERSION', '1.0.9' );
 
 
 // If this file is called directly, abort.

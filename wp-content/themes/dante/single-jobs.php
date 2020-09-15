@@ -20,7 +20,7 @@
 	
 		<div class="inner-page-wrap <?php echo esc_attr($page_wrap_class); ?> clearfix">
 			
-			<article <?php post_class('clearfix row'); ?> id="<?php the_ID(); ?>" itemscope itemtype="http://schema.org/BlogPosting">
+			<article <?php post_class('clearfix row'); ?> id="<?php the_ID(); ?>" itemscope itemtype="http://schema.org/JobPosting">
 				
 			<div class="entry-title" itemprop="name"><?php the_title(); ?></div>
 			

@@ -39,8 +39,8 @@
 
         },
         galleryImagesControls: function() {
-            $( '.gallery_widget_add_images' ).live(
-                "click", function( e ) {
+            $( document ).on(
+                "click", '.gallery_widget_add_images', function( e ) {
 
                     e.preventDefault();
 
@@ -91,8 +91,8 @@
                 }
             );
 
-            $( '.gallery_widget_img_select li' ).live(
-                "click", function( e ) {
+            $( document ).on(
+                "click", '.gallery_widget_img_select li', function( e ) {
                     $( this ).toggleClass( 'added' );
 
                     var hidden_ids = $( this ).parent().parent().prev().prev().prev(),
@@ -188,8 +188,8 @@
             }
 
 			// Icon grid
-            $( '.font-icon-grid' ).on(
-                'click', 'li', function() {
+            $( document ).on(
+                'click', '.font-icon-grid li', function() {
                     var selection = $( this ),
                         iconName = selection.find( 'i' ).attr( 'class' );
 
@@ -380,7 +380,7 @@ jQuery( document ).ready(
             	check_form_dependency_fields();
             	});
 
-		jQuery('.sf-close-delete-file').live('click', function(e) {
+		jQuery('.sf-close-delete-file').on('click', function(e) {
 			e.preventDefault();
 			jQuery(this).parent().parent().remove();
 			jQuery('.gallery_widget_attached_images_ids').val("");
@@ -390,7 +390,7 @@ jQuery( document ).ready(
 
         jQuery( 'body' ).append( '<div class="spb-modal-tabs"></div>' );
 
-        jQuery( '#cancel-small-form-background' ).live(
+        jQuery( '#cancel-small-form-background' ).on(
             "click", function() {
 
                 jQuery( '.spb-modal-tabs' ).html( '' );
@@ -404,7 +404,7 @@ jQuery( document ).ready(
         );
 
 
-        jQuery( '#save-small-form' ).live(
+        jQuery( '#save-small-form' ).on(
             "click", function() {
 
                 saveSmallFormEditing();
@@ -414,7 +414,7 @@ jQuery( document ).ready(
         );
 
 
-        $( '#sf_directory_calculate_coordinates' ).live(
+        $( '#sf_directory_calculate_coordinates' ).on(
             "click", function( e ) {
                 e.preventDefault();
                 var geocoder = new google.maps.Geocoder();
@@ -428,8 +428,8 @@ jQuery( document ).ready(
             }
         );
 
-        $( '.spb_sortable' ).live(
-            "mouseenter", function( e ) {
+        $( document ).on(
+            "mouseenter", '.spb_sortable', function( e ) {
 
                 e.preventDefault();
 
@@ -442,8 +442,8 @@ jQuery( document ).ready(
             }
         );
 
-        $( '.spb_sortable' ).live(
-            "mouseleave", function( e ) {
+        $( document ).on(
+            "mouseleave", '.spb_sortable', function( e ) {
 
                 e.preventDefault();
                 $( this ).find( '.controls_right:first , .column_size_wrapper:first' ).hide()
@@ -454,7 +454,7 @@ jQuery( document ).ready(
         );
 
 
-        $( '#close-fullscreen-preview' ).live(
+        $( '#close-fullscreen-preview' ).on(
             'click', function( e ) {
                 e.preventDefault();
                 jQuery( 'body' ).css( 'overflow', '' );
@@ -487,7 +487,7 @@ jQuery( document ).ready(
         );
 
 
-        $( '.asset-auto-complete' ).live(
+        $( '.asset-auto-complete' ).on(
             'input', function( event ) {
 
                 if ( $( this ).val().length > 1 ) {
@@ -526,7 +526,7 @@ jQuery( document ).ready(
             }
         );
 
-		$('.search-icon-grid').live('input', function(event){
+		$('.search-icon-grid').on('input', function(event){
 
 		if( $(this).val().length > 1 ) {
 
@@ -844,7 +844,7 @@ jQuery( document ).ready(
             }
         );
 
-        $( '.add-element-to-column' ).live(
+        $( '.add-element-to-column' ).on(
             "click", function( e ) {
                 e.preventDefault();
 
@@ -932,7 +932,7 @@ jQuery( document ).ready(
         );
 
         /*** Toggle click (FAQ) ***/
-        jQuery( ".toggle_title" ).live(
+        jQuery( ".toggle_title" ).on(
             "click", function( e ) {
                 if ( jQuery( this ).hasClass( 'toggle_title_active' ) ) {
                     jQuery( this ).removeClass( 'toggle_title_active' ).next().hide();
@@ -1017,7 +1017,7 @@ jQuery( document ).ready(
         sortElementsSlideout();
 
 
-        $( '.alt_background' ).live(
+        $( '.alt_background' ).on(
             'change', function() {
                 $( '.altbg-preview' ).attr( 'class', 'altbg-preview' );
                 $( '.altbg-preview' ).addClass( jQuery( this ).val() );
@@ -1139,7 +1139,7 @@ function open_custom_elements_dropdown() {
  */
 
 function spb_templateSystem() {
-    jQuery( '#spb_save_template' ).live(
+    jQuery( '#spb_save_template' ).on(
         "click", function( e ) {
             e.preventDefault();
 
@@ -1166,7 +1166,7 @@ function spb_templateSystem() {
         }
     );
 
-    jQuery( '.sf_prebuilt_template a' ).live(
+    jQuery( '.sf_prebuilt_template a' ).on(
         "click", function( e ) {
             e.preventDefault();
 
@@ -1204,7 +1204,7 @@ function spb_templateSystem() {
         }
     );
 
-    jQuery( '.spb_template_li a' ).live(
+    jQuery( '.spb_template_li a' ).on(
         "click", function( e ) {
             e.preventDefault();
             var data = {
@@ -1232,7 +1232,7 @@ function spb_templateSystem() {
         }
     );
 
-    jQuery( '.spb_remove_template' ).live(
+    jQuery( '.spb_remove_template' ).on(
         "click", function( e ) {
             e.preventDefault();
             var template_name = jQuery( this ).closest( '.spb_template_li' ).find( 'a' ).text();
@@ -1255,7 +1255,7 @@ function spb_templateSystem() {
 }
 
 function spb_customElementSystem() {
-    jQuery( '.element-save' ).live(
+    jQuery( '.element-save' ).on(
         "click", function( e ) {
             e.preventDefault();
 
@@ -1282,7 +1282,7 @@ function spb_customElementSystem() {
         }
     );
 
-    jQuery( '.spb_elements_li a' ).live(
+    jQuery( '.spb_elements_li a' ).on(
         "click", function( e ) {
             e.preventDefault();
             var data = {
@@ -1311,7 +1311,7 @@ function spb_customElementSystem() {
         }
     );
 
-    jQuery( '.spb_remove_element' ).live(
+    jQuery( '.spb_remove_element' ).on(
         "click", function( e ) {
             e.preventDefault();
             var element_name = jQuery( this ).closest( '.spb_elements_li' ).find( 'a' ).text();
@@ -2169,8 +2169,8 @@ function columnControls() {
         }
     );
 
-    jQuery( ".spb_sortable .spb_sortable .column_popup" ).live(
-        "click", function( e ) {
+    jQuery( document ).on(
+        "click", ".spb_sortable .spb_sortable .column_popup", function( e ) {
             e.preventDefault();
             var answer = confirm( "Press OK to pop (move) section to the top level, Cancel to leave" );
             if ( answer ) {
@@ -2181,8 +2181,8 @@ function columnControls() {
         }
     );
 
-    jQuery( ".column_edit, .column_edit_trigger" ).live(
-        "click", function( e ) {
+    jQuery( document ).on(
+        "click", ".column_edit, .column_edit_trigger", function( e ) {
             e.preventDefault();
             //jQuery('body,html').animate({ scrollTop: 0});
             var element = jQuery( this ).closest( '.spb_sortable' );
@@ -2192,8 +2192,8 @@ function columnControls() {
     );
 
 
-    jQuery( ".column_increase" ).live(
-        "click", function( e ) {
+    jQuery( document ).on(
+        "click", ".column_increase", function( e ) {
             e.preventDefault();
             var column = jQuery( this ).closest( ".spb_sortable" ),
                 sizes = getColumnSize( column );
@@ -2208,8 +2208,8 @@ function columnControls() {
         }
     );
 
-    jQuery( ".column_decrease" ).live(
-        "click", function( e ) {
+    jQuery( document ).on(
+        "click", ".column_decrease", function( e ) {
             e.preventDefault();
             var column = jQuery( this ).closest( ".spb_sortable" ),
                 sizes = getColumnSize( column );
@@ -3261,7 +3261,7 @@ function spbAccordionInitCallBack( element ) {
             );
 
             function setAccordionButtons() {
-                jQuery( '.spb_accordion_holder .delete_tab' ).live(
+                jQuery( '.spb_accordion_holder .delete_tab' ).on(
                     'click', function( e ) {
 
                         e.preventDefault();

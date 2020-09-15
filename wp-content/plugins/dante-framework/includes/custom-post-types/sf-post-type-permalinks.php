@@ -89,6 +89,18 @@
                         $this,
                         'faqs_category_slug_input'
                     ), 'permalink', 'optional' );
+
+                // Add faqs section to the permalinks page
+                add_settings_section( 'sf-jobs-permalink', __( 'Jobs permalink base', 'dante-framework' ), array(
+                        $this,
+                        'jobs_settings'
+                    ), 'permalink' );
+
+                // Add team settings
+                add_settings_field( 'jobs_category_slug', __( 'Job category base', 'dante-framework' ), array(
+                        $this,
+                        'jobs_category_slug_input'
+                    ), 'permalink', 'optional' );
             }
 
             public function portfolio_category_slug_input() {
@@ -148,6 +160,16 @@
                        value="<?php if ( isset( $faqs_permalinks['category_base'] ) ) {
                            echo esc_attr( $faqs_permalinks['category_base'] );
                        } ?>" placeholder="<?php echo __( 'faqs-category', 'dante-framework' ) ?>"/>
+            <?php
+            }
+            
+            public function jobs_category_slug_input() {
+                $faqs_permalinks = get_option( 'sf_jobs_permalinks' );
+                ?>
+                <input name="jobs_category_slug" type="text" class="regular-text code"
+                       value="<?php if ( isset( $jobs_permalinks['category_base'] ) ) {
+                           echo esc_attr( $jobs_permalinks['category_base'] );
+                       } ?>" placeholder="<?php echo __( 'jobs-category', 'dante-framework' ) ?>"/>
             <?php
             }
 
@@ -498,6 +520,73 @@
             <?php
             }
 
+            public function jobs_settings() {
+                echo wpautop( __( 'These settings control the permalinks used for Jobs. These settings only apply when <strong>not using "default" permalinks above</strong>.', 'dante-framework' ) );
+
+                // Get current permalinks
+                $permalinks          = get_option( 'sf_jobs_permalinks' );
+                $jobs_permalink = $permalinks['jobs_base'];
+
+                // Set base slug & directory base
+                $base_slug      = __( 'jobs', 'dante-framework' );
+                $jobs_base = __( 'jobs', 'dante-framework' );
+
+                $structures = array(
+                    0 => '',
+                    1 => '/' . trailingslashit( $jobs_base ),
+                    2 => '/' . trailingslashit( $base_slug ),
+                    3 => '/' . trailingslashit( $base_slug ) . trailingslashit( '%jobs-category%' )
+                );
+                ?>
+                <table class="form-table">
+                    <tbody>
+                    <tr>
+                        <th><label><input name="jobs_permalink" type="radio" value="<?php echo esc_attr($structures[0]); ?>"
+                                          class="sf_jobs_tog" <?php checked( $structures[0], $jobs_permalink ); ?> /> <?php _e( 'Default', 'dante-framework' ); ?>
+                            </label></th>
+                        <td><code><?php echo home_url(); ?>/?jobs=sample-job-item</code></td>
+                    </tr>
+                    <tr>
+                        <th><label><input name="jobs_permalink" type="radio" value="<?php echo esc_attr($structures[1]); ?>"
+                                          class="sf_jobs_tog" <?php checked( $structures[1], $jobs_permalink ); ?> /> <?php _e( 'Jobs', 'dante-framework' ); ?>
+                            </label></th>
+                        <td><code><?php echo home_url(); ?>/<?php echo esc_url($jobs_base); ?>/sample-faq-item/</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label><input name="jobs_permalink" id="sf_jobs_custom_selection" type="radio"
+                                          value="custom"
+                                          class="sf_jobs_tog" <?php checked( in_array( $jobs_permalink, $structures ), false ); ?> />
+                                <?php _e( 'Custom Base', 'dante-framework' ); ?></label></th>
+                        <td>
+                            <input name="jobs_permalink_structure" id="sf_jobs_permalink_structure"
+                                   type="text" value="<?php echo esc_attr( $jobs_permalink ); ?>"
+                                   class="regular-text code"> <span
+                                class="description"><?php esc_html_e( 'Enter a custom base to use. A base <strong>must</strong> be set or WordPress will use default instead.', 'dante-framework' ); ?></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <script type="text/javascript">
+                    jQuery(
+                        function() {
+                            jQuery( 'input.sf_jobs_tog' ).change(
+                                function() {
+                                    jQuery( '#sf_jobs_permalink_structure' ).val( jQuery( this ).val() );
+                                }
+                            );
+
+                            jQuery( '#sf_jobs_permalink_structure' ).focus(
+                                function() {
+                                    jQuery( '#sf_jobs_custom_selection' ).click();
+                                }
+                            );
+                        }
+                    );
+                </script>
+            <?php
+            }
+
             public function settings_save() {
                 if ( ! is_admin() ) {
                     return;
@@ -513,6 +602,7 @@
                     $sf_directory_category_slug = sanitize_text_field( $_POST['directory_category_slug'] );
                     $sf_directory_location_slug = sanitize_text_field( $_POST['directory_location_slug'] );
                     $sf_faqs_category_slug      = sanitize_text_field( $_POST['faqs_category_slug'] );
+                    $sf_jobs_category_slug      = sanitize_text_field( $_POST['jobs_category_slug'] );
 
                     $port_permalinks = get_option( 'sf_portfolio_permalinks' );
                     if ( ! $port_permalinks ) {
@@ -541,9 +631,15 @@
 
                     $faqs_permalinks = get_option( 'sf_faqs_permalinks' );
                     if ( ! $faqs_permalinks ) {
-                        $$faqs_permalinks = array();
+                        $faqs_permalinks = array();
                     }
                     $faqs_permalinks['category_base'] = untrailingslashit( $sf_faqs_category_slug );
+
+                    $jobs_permalinks = get_option( 'sf_jobs_permalinks' );
+                    if ( ! $jobs_permalinks ) {
+                        $jobs_permalinks = array();
+                    }
+                    $jobs_permalinks['category_base'] = untrailingslashit( $sf_jobs_category_slug );
 
                     // Permalink bases
                     $portfolio_permalink = sanitize_text_field( $_POST['portfolio_permalink'] );
@@ -551,6 +647,7 @@
                     $team_permalink      = sanitize_text_field( $_POST['team_permalink'] );
                     $directory_permalink = sanitize_text_field( $_POST['directory_permalink'] );
                     $faqs_permalink      = sanitize_text_field( $_POST['faqs_permalink'] );
+                    $jobs_permalink      = sanitize_text_field( $_POST['jobs_permalink'] );
 
                     if ( $portfolio_permalink == 'custom' ) {
                         $portfolio_permalink = sanitize_text_field( $_POST['portfolio_permalink_structure'] );
@@ -577,6 +674,11 @@
                     } elseif ( empty( $faqs_permalink ) ) {
                         $faqs_permalink = false;
                     }
+                    if ( $jobs_permalink == 'custom' ) {
+                        $jobs_permalink = sanitize_text_field( $_POST['jobs_permalink_structure'] );
+                    } elseif ( empty( $jobs_permalink ) ) {
+                        $jobs_permalink = false;
+                    }
 
                     // Set base for each permalinks variable
                     $port_permalinks['portfolio_base']      = untrailingslashit( $portfolio_permalink );
@@ -584,6 +686,7 @@
                     $team_permalinks['team_base'] = untrailingslashit( $team_permalink );
                     $directory_permalinks['directory_base'] = untrailingslashit( $directory_permalink );
                     $faqs_permalinks['faqs_base'] = untrailingslashit( $faqs_permalink );
+                    $jobs_permalinks['jobs_base'] = untrailingslashit( $jobs_permalink );
 
                     // Update permalinks
                     update_option( 'sf_portfolio_permalinks', $port_permalinks );
@@ -591,6 +694,7 @@
                     update_option( 'sf_team_permalinks', $team_permalinks );
                     update_option( 'sf_directory_permalinks', $directory_permalinks );
                     update_option( 'sf_faqs_permalinks', $faqs_permalinks );
+                    update_option( 'sf_jobs_permalinks', $jobs_permalinks );
                 }
             }
         }

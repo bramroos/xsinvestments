@@ -463,7 +463,7 @@ jQuery(function(jQuery) {
 		jQuery('.rwmb-meta-box').find('.meta-altbg-preview').addClass(altBackgroundValue);
 	}
 	
-	jQuery('#dante_page_title_bg').live('change',function(){
+	jQuery('#dante_page_title_bg').on('change',function(){
 	    jQuery('.meta-altbg-preview').attr('class', 'meta-altbg-preview');
 	    jQuery('.meta-altbg-preview').addClass(jQuery(this).val());
 	});
@@ -525,7 +525,7 @@ jQuery(function(jQuery) {
 		var total_hidden = 0;	
 		for (var i = 0, n = tabBoxes.length; i < n; i++ ) {
 			var target_id = jQuery(tabBoxes[i]).attr('id');
-			var tab_name = jQuery(tabBoxes[i]).find('.hndle > span').text();
+			var tab_name = jQuery(tabBoxes[i]).find('.hndle').text();
 			var tab_class = "";
 			
 			if (jQuery(tabBoxes[i]).hasClass('hide-if-js')) {

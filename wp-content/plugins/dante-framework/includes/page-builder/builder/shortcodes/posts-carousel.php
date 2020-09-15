@@ -175,7 +175,7 @@ class SwiftPageBuilderShortcode_posts_carousel extends SwiftPageBuilderShortcode
 						$thumb_img_url = "default";
 					}
 				
-					$image = dante_aq_resize( $thumb_img_url, 420, 315, true, false);
+					$image = dante_aq_resize( $thumb_img_url, 420, NULL, true, false);
 						
 					if ($image) {
 						$items .= '<img itemprop="image" src="'.$image[0].'" width="'.$image[1].'" height="'.$image[2].'" alt="'.$item_title.'" />';

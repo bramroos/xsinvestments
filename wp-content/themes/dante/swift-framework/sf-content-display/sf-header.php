@@ -434,7 +434,7 @@
 				if ($show_cart) {
 				$menu_full_output .= dante_get_cart();
 				}
-				if ( class_exists( 'YITH_WCWL_UI' ) && $show_wishlist)  {
+				if ( class_exists( 'YITH_WCWL' ) && $show_wishlist)  {
 				$menu_full_output .= dante_get_wishlist();
 				}
 				$menu_full_output .= '</ul>'. "\n";

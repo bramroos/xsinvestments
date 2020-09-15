@@ -1,5 +1,5 @@
 jQuery(document).ready( function($) {	
-	$('.love-it').live('click', function() {
+	$('.love-it').on('click', function() {
 		var $this = $(this);	
 		var post_id = $this.data('post-id');
 		var user_id = $this.data('user-id');
